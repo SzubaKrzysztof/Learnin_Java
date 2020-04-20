@@ -1,0 +1,170 @@
+2020-01-23 19:00:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabela "KONTA" już istnieje
+Table "KONTA" already exists; SQL statement:
+CREATE TABLE `konta` (`name` VARCHAR(255) , `password` VARCHAR(255) NOT NULL , PRIMARY KEY (`name`) )  [42101-200]
+2020-01-23 19:00:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabela "KONTA" już istnieje
+Table "KONTA" already exists; SQL statement:
+CREATE TABLE `konta` (`name` VARCHAR(255) , `password` VARCHAR(255) NOT NULL , PRIMARY KEY (`name`) )  [42101-200]
+2020-01-23 19:02:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabela "KONTA" już istnieje
+Table "KONTA" already exists; SQL statement:
+CREATE TABLE `konta` (`name` VARCHAR(255) , `password` VARCHAR(255) NOT NULL , PRIMARY KEY (`name`) )  [42101-200]
+2020-01-23 19:30:52 database: flush
+org.h2.message.DbException: Błąd ogólny: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at com.j256.ormlite.jdbc.JdbcConnectionSource.makeConnection(JdbcConnectionSource.java:266)
+	at com.j256.ormlite.jdbc.JdbcConnectionSource.getReadWriteConnection(JdbcConnectionSource.java:187)
+	at com.j256.ormlite.table.TableUtils.doCreateTable(TableUtils.java:397)
+	at com.j256.ormlite.table.TableUtils.doCreateTable(TableUtils.java:383)
+	at com.j256.ormlite.table.TableUtils.createTable(TableUtils.java:55)
+	at dbpackage.Dao.Main.dbpackage.Dao.Main.main(dbpackage.Dao.Main.java:18)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Błąd ogólny: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 30 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 24 more
+2020-01-23 21:09:21 database: flush
+org.h2.message.DbException: Błąd ogólny: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at com.j256.ormlite.jdbc.JdbcConnectionSource.makeConnection(JdbcConnectionSource.java:266)
+	at com.j256.ormlite.jdbc.JdbcConnectionSource.getReadWriteConnection(JdbcConnectionSource.java:187)
+	at com.j256.ormlite.table.TableUtils.doDropTable(TableUtils.java:275)
+	at com.j256.ormlite.table.TableUtils.dropTable(TableUtils.java:180)
+	at com.j256.ormlite.table.TableUtils.dropTable(TableUtils.java:165)
+	at dbpackage.Dao.Main.dbpackage.Dao.Main.main(dbpackage.Dao.Main.java:18)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Błąd ogólny: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 30 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 24 more
+2020-01-23 21:11:12 database: flush
+org.h2.message.DbException: Błąd ogólny: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:189)
+	at com.j256.ormlite.jdbc.JdbcConnectionSource.makeConnection(JdbcConnectionSource.java:266)
+	at com.j256.ormlite.jdbc.JdbcConnectionSource.getReadWriteConnection(JdbcConnectionSource.java:187)
+	at com.j256.ormlite.table.TableUtils.doDropTable(TableUtils.java:275)
+	at com.j256.ormlite.table.TableUtils.dropTable(TableUtils.java:180)
+	at com.j256.ormlite.table.TableUtils.dropTable(TableUtils.java:165)
+	at dbpackage.Dao.Main.dbpackage.Dao.Main.main(dbpackage.Dao.Main.java:18)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Błąd ogólny: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 30 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/Krzysztof/Desktop/mavenKursORMite/database.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 24 more
+2020-01-23 21:39:55 database: wrong user or password; user: ""
+org.h2.message.DbException: Nieprawidłowy użytkownik/hasło
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.engine.Engine.openSession(Engine.java:131)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.test(WebApp.java:947)
+	at org.h2.server.web.WebApp.process(WebApp.java:238)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebThread.process(WebThread.java:139)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Nieprawidłowy użytkownik/hasło
+Wrong user name or password [28000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 21 more
